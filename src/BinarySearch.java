@@ -24,9 +24,24 @@ public class BinarySearch {
 			System.out.println("number is " + find + " ");
 
 			//min
+			int minI = 0;
+			int min = myNumbers.get(minI);
 			//max
+			int maxI = myNumbers.size()-1;
+			int max = myNumbers.get(maxI);
 			//mid
-			//if existst
+			int midI = (maxI+minI) / 2;
+			int mid = myNumbers.get(midI);
+			// if exists in arrayList
+
+			int number = 0;
+//			int	number = binarey(myNumbers, find, minI, maxI, midI);
+
+			if(number == -1){
+				System.out.println(find + " not found ");
+			}else{
+				System.out.println(find +" found at index " + number);
+			}
 
 			//user can play again
 			System.out.print("play again? ");
@@ -34,6 +49,19 @@ public class BinarySearch {
 		}
 
 
+	}
+
+	/**
+	 * Binarey Search that only takes in numbers that are in the arraylist
+	 * @param myNumbers ArrayList of numbers
+	 * @param find users int to be found
+	 * @param minI original min location
+	 * @param maxI original max location
+	 * @param midI orginal mid location
+	 * @return location of the users int
+	 */
+	private static int binarey(ArrayList<Integer> myNumbers, int find, int minI, int maxI, int midI) {
+		return -1;
 	}
 
 
