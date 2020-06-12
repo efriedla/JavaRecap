@@ -14,34 +14,35 @@
  * @throw file does not exists
  */
 import java.util.Random;
-
+import java.util.Arrays;
 public class SortingStructures {
 	public static void main(String[] args){
 
 		Random random = new Random();
 
-		byte[] arr = makeArray( random);
+		int[] arr = makeArray( random);
 		readArr( arr );
-
-
+		Arrays.sort(arr);
+		readArr( arr );
 	}
 	/**
 	 * Creates an array filled with random numbers
 	 * @return byte[]
 	 */
-	public static byte[] makeArray( Random random){
-		byte[] arr = new byte[5];
-		random.nextBytes( arr );
+	public static int[] makeArray( Random random){
+		int[] arr = new int[10];
+		for (int i = 0; i < arr.length; i++)
+			arr[i] = random.nextInt(200);
 		return arr;
 	}
 	/**
 	 * reads arr
 	 */
-	public static void readArr( byte[] arr ){
+	public static void readArr( int[] arr ){
 		for(int i = 0; i < arr.length; i++){
-			System.out.println(arr[i]);
+			System.out.print(" " + arr[i] );
 		}
-
+		System.out.println();
 	}
 
 	/**
