@@ -20,12 +20,30 @@ public class SortingStructures {
 
 		Random random = new Random();
 
+		byte[] arr = makeArray( random);
+		readArr( arr );
+
+
+	}
+	/**
+	 * Creates an array filled with random numbers
+	 * @return byte[]
+	 */
+	public static byte[] makeArray( Random random){
 		byte[] arr = new byte[5];
 		random.nextBytes( arr );
+		return arr;
+	}
+	/**
+	 * reads arr
+	 */
+	public static void readArr( byte[] arr ){
 		for(int i = 0; i < arr.length; i++){
 			System.out.println(arr[i]);
 		}
+
 	}
+
 	/**
 	 * Create/populate array
 	 * @returns an array with random numbers
