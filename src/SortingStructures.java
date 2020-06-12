@@ -18,5 +18,12 @@
 public class SortingStructures {
 	public static void main(String[] args){
 
+
+		System.out.println("Hello World!");
 	}
+	/**
+	 * Create/populate array
+	 * @returns an array with random numbers
+	 */
+
 }
