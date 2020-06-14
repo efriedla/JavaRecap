@@ -22,7 +22,8 @@ public class SortingStructures {
 
 		int[] arr = makeArray( random);
 		readArr( arr );
-		Arrays.sort(arr);
+//		Arrays.sort(arr);
+		bubbleSort( arr );
 		readArr( arr );
 	}
 	/**
@@ -46,8 +47,26 @@ public class SortingStructures {
 	}
 
 	/**
-	 * Create/populate array
-	 * @returns an array with random numbers
+	 * Bubble Sort
+	 * @param  arr unsorted array
+	 * @returns Sorted array
 	 */
+	public static int[] bubbleSort(int[] arr){
+		int length = arr.length;
+		for (int i = 0; i <length -1; i++){
+			for(int j = 0; j < length-i-1; j++){
+				if(arr[j] > arr[i]){
+					//swap
+					System.out.print("swapped "+ arr[j] + " with " + arr[j+1]);
+					int temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+				System.out.println(" Version " + i );
+				readArr(arr);
+			}
+		}
+		return arr;
+	}
 
-}
+} //End
