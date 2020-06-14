@@ -22,9 +22,14 @@ public class SortingStructures {
 
 		int[] arr = makeArray( random);
 		readArr( arr );
-//		Arrays.sort(arr);
+
+		long startTime = System.nanoTime();
 		bubbleSort( arr );
+//		Arrays.sort(arr);
+		long stopTime = System.nanoTime();
 		readArr( arr );
+		System.out.print( "Method took " );
+		System.out.println(stopTime - startTime);
 	}
 	/**
 	 * Creates an array filled with random numbers
@@ -57,13 +62,10 @@ public class SortingStructures {
 			for(int j = 0; j < length-i-1; j++){
 				if(arr[j] > arr[i]){
 					//swap
-					System.out.print("swapped "+ arr[j] + " with " + arr[j+1]);
 					int temp = arr[j];
 					arr[j] = arr[j+1];
 					arr[j+1] = temp;
 				}
-				System.out.println(" Version " + i );
-				readArr(arr);
 			}
 		}
 		return arr;
