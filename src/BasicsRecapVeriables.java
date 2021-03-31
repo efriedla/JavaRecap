@@ -1,5 +1,7 @@
 import java.io.IOException;
 import static java.lang.Math.*;
+import java.util.Scanner;
+
 /**
  * Problem: Computing the Area of a Circle
  * This program computes the area of the circle.
@@ -11,9 +13,12 @@ import static java.lang.Math.*;
  */
 public class BasicsRecapVeriables {
 	public static void main(String [] args) throws IOException {
-		int placeholder = 5;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Please type a radius to begin ");
+		int placeholder = scan.nextInt();
 		System.out.print("Area of a circle with a radius of " + placeholder + " is ");
 		System.out.format("%.3f%n",circleArea(placeholder));
+		scan.close();
 	}
 
 	/**
