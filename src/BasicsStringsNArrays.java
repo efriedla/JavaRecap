@@ -5,11 +5,21 @@ public class BasicsStringsNArrays {
 	public static void main(String [] args) throws IOException {
 		// Finding a Character or a Substring in a String
 		String test = "Bob Test";
-		System.out.println(test);
-		int space =test.indexOf(' ');
-		String firstN = test.substring(0,space);
-		String lastN = test.substring(space + 1);
-		System.out.println(firstN + " ---- " + lastN);
+		subStringByFirstSpace(test);
+
+
+
+	}
+
+	/**
+	 * Finding a Character or a Substring in a String
+	 * @param s
+	 */
+	public static void subStringByFirstSpace(String s){
+		int space = s.indexOf(' ');
+		String first = s.substring(0,space);
+		String last = s.substring(space + 1);
+		System.out.println(first + "\n" + last);
 
 	}
 }
