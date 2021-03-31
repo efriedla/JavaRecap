@@ -14,13 +14,15 @@ import java.util.Scanner;
 public class BasicsRecapVeriables {
 	public static void main(String [] args) throws IOException {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Please type a radius to begin ");
-		int placeholder = scan.nextInt();
-		System.out.print("Area of a circle with a radius of " + placeholder + " is ");
-		System.out.format("%.3f%n",circleArea(placeholder));
+//		System.out.println("Please type a radius to begin ");
+//		int placeholder = scan.nextInt();
+//		System.out.print("Area of a circle with a radius of " + placeholder + " is ");
+//		System.out.format("%.3f%n",circleArea(placeholder));
 
 		// remaining times from seconds
-		minutesLeft(scan);
+		//minutesLeft(scan);
+		// Find Celcius
+		//findCelsuis(scan);
 		scan.close();
 	}
 
@@ -45,6 +47,18 @@ public class BasicsRecapVeriables {
 		int minutes = seconds/ 60;
 		int sec = seconds % 60;
 		System.out.println(minutes + " minutes and " + sec + " Seconds");
+	}
+
+	/**
+	 * Write a program that converts a Fahrenheit degree to Celsius using the formula:
+	 * (5/9) * (Fahrenhit - 32)
+	 * @param scan
+	 */
+	public static void findCelsuis(Scanner scan){
+		System.out.println("Please type a the Fahrenheit ");
+		int fahrenheit = scan.nextInt();
+		double celsuis = (5/9) * (fahrenheit - 32);
+		System.out.println("Celsuis is " + celsuis );
 	}
 
 }
