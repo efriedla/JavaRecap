@@ -5,8 +5,8 @@ public class BasicsStringsNArrays {
 	public static void main(String [] args) throws IOException {
 		// Finding a Character or a Substring in a String
 		String test = "Bob Test";
-		subStringByFirstSpace(test);
-
+		//subStringByFirstSpace(test);
+		continueTest();
 
 
 	}
@@ -22,4 +22,20 @@ public class BasicsStringsNArrays {
 		System.out.println(first + "\n" + last);
 
 	}
+
+	/**
+	 * loops to 20 but does not sum 10 or 11 into total sum
+	 */
+    public static void continueTest(){
+		int sum = 0, number = 0;
+		while(number < 20){
+			number++;
+			if (number == 10 || number == 11)
+				continue;
+			sum += number;
+		}
+		System.out.println("sum is " + sum);
+
+    }
+
 }
