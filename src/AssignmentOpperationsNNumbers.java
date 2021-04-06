@@ -49,8 +49,40 @@ import java.io.IOException;
  * Write a program that declares 2 integer variables, x, and y, and then assigns 5 to x and 8 to y. Create another variable sum and assign the value of ++x added to y and print the result. Notice the value of the sum (should be 14). Now change the increment operator to postfix (x++) and re-run the program. Notice what the value of sum is. The first configuration incremented x and then calculated the sum while the second configuration calculated the sum and then incremented x.
  */
 
+
 public class AssignmentOpperationsNNumbers {
 	public static void  main(String [] args) throws IOException {
+		int[] myNum = {1, 8, 33, 78, 787, 33987};
+		for(int i=0; i<myNum.length; i++) {
+			System.out.println(myNum[i] +" Binary code is " + toBinary(myNum[i]));
+		}
 
+
+	}
+
+	/**
+	 *  * Write the following integers in binary notation.
+	 *  Do not use any Java functions or online conversion applications
+	 *  to calculate the answer as this will hinder the learning process
+	 *  and your understanding of the concept. However,
+	 *  you may check your answers using Java methods.
+	 *  * 1
+	 *  * 8
+	 *  * 33
+	 *  * 78
+	 *  * 787
+	 *  * 33,987
+	 * @param number
+	 * @return binaryCode
+	 */
+	public static String toBinary(int number){
+		int binaryCode = number;
+		// 1 = True we use
+		//0 = False we don't use
+		// 16 8 4 2 1
+		// /2 remainder
+		Integer.toBinaryString(binaryCode);
+
+		return Integer.toBinaryString(binaryCode);
 	}
 }
