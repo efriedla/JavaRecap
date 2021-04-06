@@ -53,10 +53,9 @@ import java.io.IOException;
 public class AssignmentOpperationsNNumbers {
 	public static void  main(String [] args) throws IOException {
 		int[] myNum = {1, 8, 33, 78, 787, 33987};
-		for(int i=0; i<myNum.length; i++) {
-			System.out.println(myNum[i] +" Binary code is " + toBinary(myNum[i]));
-		}
 
+		//Question 1 "Int to Binary String
+		intToBinaryString(myNum);
 
 	}
 
@@ -72,17 +71,15 @@ public class AssignmentOpperationsNNumbers {
 	 *  * 78
 	 *  * 787
 	 *  * 33,987
-	 * @param number
-	 * @return binaryCode
+	 * @param myNum
 	 */
-	public static String toBinary(int number){
-		int binaryCode = number;
+	public static void intToBinaryString(int[] myNum){
+		for(int i=0; i<myNum.length; i++) {
+			System.out.println(myNum[i] +" Binary code is " + Integer.toBinaryString(myNum[i]));
+		}
 		// 1 = True we use
 		//0 = False we don't use
 		// 16 8 4 2 1
 		// /2 remainder
-		Integer.toBinaryString(binaryCode);
-
-		return Integer.toBinaryString(binaryCode);
 	}
 }
