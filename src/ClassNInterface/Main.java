@@ -17,5 +17,15 @@ public class Main {
 	    System.out.println("Make " + car.make + "\nModel " + car.model +"\nyear " + car.year);
 	    car.setServiceDate(2001);
 	    System.out.println(car.ServiceDate());
+	    car.honk();
+	    CarInheritance car2 = new CarInheritance("ford","fussion",2012);
+	    System.out.println(car2.owner);
+
+	    FireMoster fm = new FireMoster();
+	    fm.sound();
+	    fm.sleep();
+	    WaterMonster wm = new WaterMonster();
+	    wm.sound();
+	    wm.sleep();
     }
 }

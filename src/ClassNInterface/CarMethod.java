@@ -19,4 +19,8 @@ public class CarMethod {
 	public void setServiceDate(int newService) {
 		this.lastServiced = newService;
 	}
+
+	public void honk() {                    // Vehicle method
+		System.out.println("Tuut, tuut!");
+	}
 }
