@@ -1,3 +1,5 @@
+package Learning;
+
 import java.io.IOException;
 //import static java.util.*;
 import java.util.Scanner;

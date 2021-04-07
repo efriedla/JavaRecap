@@ -82,4 +82,6 @@ public class AssignmentOpperationsNNumbers {
 		// 16 8 4 2 1
 		// /2 remainder
 	}
+
+
 }

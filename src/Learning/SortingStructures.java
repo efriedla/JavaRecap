@@ -1,4 +1,4 @@
-/**
+package Learning; /**
  * Sorting
  * create an int array(50) with random numbers
  * print array
