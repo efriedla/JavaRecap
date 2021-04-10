@@ -1,5 +1,16 @@
 package DataStructures;
 
+/**
+ * Get Rid of Extra Spaces
+ * Select and Treat All Blank Cells
+ * Convert Numbers Stored as Text into Numbers
+ * Remove Duplicates
+ * Highlight Errors
+ * Change Text to Lower/Upper/Proper Case
+ * Spell Check
+ * Delete all Formatting
+ */
+
 public class CleanString {
 	String toClean;
 	int count = 0;
@@ -19,4 +30,11 @@ public class CleanString {
 	public void setToClean(String s){
 		this.toClean = s;
 	}
+	// to upper
+	// to lower
+	// all caps
+	// trim
+	// substring
+		// multiple spaces
+	// if int string
 }
