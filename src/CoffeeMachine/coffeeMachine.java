@@ -40,11 +40,16 @@ public class coffeeMachine {
 
 	public static void main(String[] args) {
 		//ingrediance
-		int coffeebeans = 1000;
-		int water = 1000;
-		int milk = 1000;
-		int cups = 100;
-		int balance = 100;
+//		int coffeebeans = 1000;
+//		int water = 1000;
+//		int milk = 1000;
+//		int cups = 100;
+//		int balance = 100;
+
+		Order one = new Order(3);
+		one.setMilkInventory(5000);
+		one.useMilk();
+		one.useBeans();
 		//process
 		//for 1 cup of black coffee
 		//grind  beans 1000 - 15
@@ -57,7 +62,7 @@ public class coffeeMachine {
 
 	//makeCoffee();
 		//coffeebeans = coffee(coffeebeans);
-		measureIngrediance(3,"coffee");
+		//measureIngrediance(3,"coffee");
 
 
 
@@ -76,26 +81,22 @@ public class coffeeMachine {
 			int waterNeeded = cups * water_per_cup;
 			int milkNeeded = cups * milk_per_cup;
 			int beensNeeded = cups * beans_per_cup;
-			System.out.println(waterNeeded);
-			System.out.println(milkNeeded);
-			System.out.println(beensNeeded);
+//			System.out.println(waterNeeded);
+//			System.out.println(milkNeeded);
+//			System.out.println(beensNeeded);
 			//check if has enough ingrediance
 			//call next step
+			boilWater();
+			mixWaterNBeans();
+			pourcoffee();
+			serveCoffee();
+
 		}else{
 			System.out.println(type + " no recipy");
 		}
 
 	}
-	public static int coffee(int beans){
-		System.out.println("Starting to make a coffee");
-		System.out.println("Grinding coffee beans");
-		beans -= 30;
-		boilWater();
-		mixWaterNBeans();
-		pourcoffee();
-		serveCoffee();
-		return beans;
-	}
+
 	public static void boilWater(){
 		System.out.println("Boiling water");
 
