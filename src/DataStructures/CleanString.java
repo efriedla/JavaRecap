@@ -30,6 +30,12 @@ public class CleanString {
 	public void setToClean(String s){
 		this.toClean = s;
 	}
+	public String toCaps(){
+		toClean =  toClean.toUpperCase();
+		whatToClean();
+		return toClean;
+
+	}
 	// to upper
 	// to lower
 	// all caps

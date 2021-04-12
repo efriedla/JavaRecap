@@ -6,6 +6,7 @@ public class CallingMadeDataStructures {
 		s.whatToClean();
 		s.setToClean("new String");
 		s.whatToClean();
+		s.toCaps();
 
 
 
