@@ -33,6 +33,9 @@ import java.security.PublicKey;
  * Coffee is ready!
  */
 public class coffeeMachine {
+	final static int water_per_cup = 200;
+	final static int milk_per_cup = 50;
+	final static int beans_per_cup = 15;
 
 
 	public static void main(String[] args) {
@@ -44,16 +47,19 @@ public class coffeeMachine {
 		int balance = 100;
 		//process
 		//for 1 cup of black coffee
-		//grind 30 beans 1000 - 30
-		// boil 10 water 1000 - 10
+		//grind  beans 1000 - 15
+		// boil  water 1000 - 200 ml
+		// milk 50 ml
 		//mix water and beans
 		//por in 1 cup
 		// $1
 		// serve
 
 	//makeCoffee();
-		coffeebeans = coffee(coffeebeans);
-		System.out.println(coffeebeans);
+		//coffeebeans = coffee(coffeebeans);
+		measureIngrediance(3,"coffee");
+
+
 
 	}
 	public static void makeCoffee(){
@@ -63,6 +69,22 @@ public class coffeeMachine {
 		System.out.println("Mixing boiled water with crushed coffee beans");
 		System.out.println("Pouring coffee into the cup");
 		System.out.println("Coffee is ready!");
+	}
+	public static void measureIngrediance(int cups, String type){
+		System.out.println(type);
+		if (type == "coffee"){
+			int waterNeeded = cups * water_per_cup;
+			int milkNeeded = cups * milk_per_cup;
+			int beensNeeded = cups * beans_per_cup;
+			System.out.println(waterNeeded);
+			System.out.println(milkNeeded);
+			System.out.println(beensNeeded);
+			//check if has enough ingrediance
+			//call next step
+		}else{
+			System.out.println(type + " no recipy");
+		}
+
 	}
 	public static int coffee(int beans){
 		System.out.println("Starting to make a coffee");

@@ -8,6 +8,4 @@ public interface Coffee {
 	public void displayIngrediance();
 
 
-
-
 }
