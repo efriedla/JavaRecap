@@ -40,15 +40,13 @@ public class Order{
 	 */
 	public void setMilkInventory(int milkInventory){
 		this.milkInventory = milkInventory;
-		System.out.println("milk " + milkInventory + "ml in inventory");
 	}
 
 	/**
 	 * Subtrack milk order from Inventory
 	 */
-	public void useMilk(){
-		this.milkInventory = milkInventory - (cupsOfCoffee * milk_per_cup);
-		System.out.println(cupsOfCoffee * milk_per_cup + " Used milk "+milkInventory + "ml left");
+	public int useMilk(){
+		return this.milkInventory -= (cupsOfCoffee * milk_per_cup);
 	}
 
 	/**
@@ -62,9 +60,8 @@ public class Order{
 	/**
 	 * Subtrack bean usage from inventory
 	 */
-	public void useBeans(){
-		this.beansInventory = beansInventory - (cupsOfCoffee * beans_per_cup);
-		System.out.println(cupsOfCoffee * beans_per_cup + " Used beas "+beansInventory + "ml left");
+	public int useBeans(){
+		return this.beansInventory = beansInventory - (cupsOfCoffee * beans_per_cup);
 	}
 
 	/**
@@ -78,8 +75,8 @@ public class Order{
 	/**
 	 * Subtrack water used from inventory
 	 */
-	public void useWater(){
-		this.waterInventory -= (cupsOfCoffee * water_per_cup);
+	public int useWater(){
+		return this.waterInventory -= (cupsOfCoffee * water_per_cup);
 	}
 
 
@@ -93,6 +90,22 @@ public class Order{
 		System.out.println("Mixing boiled water with crushed coffee beans");
 		System.out.println("Pouring coffee into the cup");
 		System.out.println("Coffee is ready!");
+	}
+
+	/**
+	 * Check if able to fullfill order
+	 */
+	public void hasStock(){
+		try{
+			if(useMilk() > 0 ){
+				System.out.println(cupsOfCoffee + " can be made "+ useMilk() + " milk remains");
+			}else{
+				System.out.println(cupsOfCoffee + " can not be made "+ useMilk() + " milk remains");
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 
