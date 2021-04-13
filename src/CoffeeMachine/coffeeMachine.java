@@ -14,7 +14,7 @@ public class coffeeMachine {
 	public static void main(String[] args) {
 
 
-		Order one = new Order(30);
+		Order one = new Order(24);
 		one.hasStock();
 
 

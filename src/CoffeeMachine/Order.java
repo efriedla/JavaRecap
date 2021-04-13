@@ -97,10 +97,12 @@ public class Order{
 	 */
 	public void hasStock(){
 		try{
-			if(useMilk() > 0 ){
-				System.out.println(cupsOfCoffee + " can be made "+ useMilk() + " milk remains");
+			if(useMilk() > 0 && useWater() > 0 && useBeans() > 0){
+				System.out.println(cupsOfCoffee + " can be made \n"+ milkInventory + " milk remains\nWater left " +
+						waterInventory + "\nBeans left " + beansInventory);
 			}else{
-				System.out.println(cupsOfCoffee + " can not be made "+ useMilk() + " milk remains");
+				System.out.println(cupsOfCoffee + " can not be made "+ milkInventory + " milk remains\n water left " +
+						waterInventory + "\nBeans left " + beansInventory);
 			}
 
 		} catch (Exception e) {
