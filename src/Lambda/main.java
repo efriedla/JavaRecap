@@ -11,11 +11,17 @@ import java.util.function.Consumer;
  * 5. collections improvements
  */
 
+
 public class main {
+
 	public static void main(String[] args) {
 		//1 -2
-		ArrayList<String> whyLamda = new ArrayList<String>();
-		whyKambda(whyLamda);
+//		ArrayList<String> whyLamda = new ArrayList<String>();
+//		whyKambda(whyLamda);
+
+		MyLambda greeter  = () -> System.out.println("hello");
+
+
 
 
 	}
@@ -30,7 +36,9 @@ public class main {
 		whyLamda.add("Easier to use APIs and Libraries");
 		whyLamda.add("Enables support for parallel processing");
 		whyLamda.forEach( (n) -> { System.out.println(n); } );
-
 	}
 
+}
+interface MyLambda {
+	void foo();
 }
