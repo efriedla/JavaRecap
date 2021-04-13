@@ -1,5 +1,6 @@
 package Lambda;
-
+import java.util.ArrayList;
+import java.util.function.Consumer;
 /**
  * Review Lamba with https://www.youtube.com/playlist?list=PLqq-6Pq4lTTa9YGfyhyW2CqdtW9RtY-I3 playlist
  * in the excersize
@@ -12,22 +13,24 @@ package Lambda;
 
 public class main {
 	public static void main(String[] args) {
-		//1
-		whyKambda();
+		//1 -2
+		ArrayList<String> whyLamda = new ArrayList<String>();
+		whyKambda(whyLamda);
+
 
 	}
-	public static  void whyKambda(){
+
+	/**
+	 * Reasons why Lambda
+	 */
+	public static  void whyKambda(ArrayList<String>  whyLamda){
 		System.out.println("Reasons to use Lambda\n");
-		String[] whyLamday = {
-				"Enables functional programing",
-				"Readable and consise code",
-				"Easier to use APIs and Libraries",
-				"Enables support for parallel processing"
-		};
-		for (int i=0; i<whyLamday.length; i++)
-		{
-			System.out.println(i + 1 +". "+ whyLamday[i]);
-		}
+		whyLamda.add("Enables functional programing");
+		whyLamda.add("Readable and consise code");
+		whyLamda.add("Easier to use APIs and Libraries");
+		whyLamda.add("Enables support for parallel processing");
+		whyLamda.forEach( (n) -> { System.out.println(n); } );
 
 	}
+
 }
