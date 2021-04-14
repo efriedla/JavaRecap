@@ -1,10 +1,28 @@
 package DataStructures;
 
+import java.util.Scanner;
+
 public class Paladrom {
 	public static void main(String args[]){
 		System.out.println("testing if paladrom");
 		System.out.println(isPaladrom(454));//True
 		System.out.println(isPaladrom("noon"));
+		Scanner sc = new Scanner(System.in);
+		int again = 1;
+		String str;
+		try {
+			while (again == 1) {
+				System.out.println("Enter a string/number to check if it is a palindrome \n");
+				str = sc.next();
+				System.out.println(isPaladrom(str));
+				System.out.println("\nEnter a 1 to enter another paladrom");
+				again = sc.nextInt();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		sc.close();
+
 
 	}
 
