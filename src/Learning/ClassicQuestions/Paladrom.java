@@ -1,4 +1,4 @@
-package DataStructures;
+package Learning.ClassicQuestions;
 
 import java.util.Scanner;
 
