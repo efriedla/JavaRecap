@@ -1,6 +1,8 @@
 package AddressBook;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 /**
  * User Stories:
@@ -37,7 +39,16 @@ import java.io.File;
 
 public class MainAddress {
 	public static void main(String[] args) {
-		File file = new File("addressBook.txt");
-		System.out.println(file.exists());
+
+
+	}
+	public static void readAddressBook(){
+		try {
+			File file = new File("addressBook.txt");
+			System.out.println(file.exists());
+			Scanner sc = new Scanner(file);
+		} catch (FileNotFoundException e) {
+			System.out.println("Something went wrong " + e);
+		}
 	}
 }
