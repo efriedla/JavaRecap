@@ -39,7 +39,8 @@ import java.util.Scanner;
 
 public class MainAddress {
 	public static void main(String[] args) {
-		readAddressBook();
+		//readAddressBook();
+		System.out.println("test");
 
 	}
 	public static void readAddressBook(){
@@ -47,7 +48,7 @@ public class MainAddress {
 			//get file
 			File file = new File("addressBook.txt");
 			//check if file exists
-			//System.out.println(file.exists());
+			System.out.println(file.exists());
 			//read file
 			Scanner sc = new Scanner(file);
 			while (sc.hasNextLine()) {
