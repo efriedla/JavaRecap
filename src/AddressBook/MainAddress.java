@@ -39,14 +39,22 @@ import java.util.Scanner;
 
 public class MainAddress {
 	public static void main(String[] args) {
-
+		readAddressBook();
 
 	}
 	public static void readAddressBook(){
 		try {
+			//get file
 			File file = new File("addressBook.txt");
-			System.out.println(file.exists());
+			//check if file exists
+			//System.out.println(file.exists());
+			//read file
 			Scanner sc = new Scanner(file);
+			while (sc.hasNextLine()) {
+				String data = sc.nextLine();
+				System.out.println(data);
+			}
+			sc.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("Something went wrong " + e);
 		}
