@@ -13,7 +13,8 @@ public class Factorial {
 //				}
 //			}
 //		}
-
+		// https://www.javatpoint.com/how-to-print-pattern-in-java
+		//printhafTriangleright(n);
 		printhafTriangle(n);
 		printhafTriangleUpsideDown(n);
 	}
@@ -33,6 +34,18 @@ public class Factorial {
 		for(i =1; i<=n; i++){
 			for(j =1;j<=i;j++){
 				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+	public static void printhafTriangleright(int n){
+		int i,j, row = n;
+		for(i = 0; i < row; i++){
+			for(j = 2*(row - i); j >= 0;j--){
+				System.out.print(" ");
+				for(j = 0; j<=i;j++){
+					System.out.print("*");
+				}
 			}
 			System.out.println();
 		}

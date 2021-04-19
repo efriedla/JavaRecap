@@ -1,6 +1,7 @@
 package CoffeeMachine;
 
 import java.security.PublicKey;
+import java.util.Scanner;
 
 /**
  * https://github.com/seycileli/CoffeeMachine
@@ -17,7 +18,13 @@ public class coffeeMachine {
 		Order one = new Order(24);
 		one.hasStock();
 
-
+		//menu for coffee
+		Scanner sc = new Scanner(System.in);
+		sc.close();
+	}
+	public static void welcomeMenu(){
+		System.out.println("Hello what could I get started for you today");
+		System.out.println("");
 	}
 
 

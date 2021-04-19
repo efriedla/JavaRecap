@@ -14,7 +14,7 @@ public class Order{
 		setMilkInventory(5000);
 		setBeansInventory(5000);
 		setWaterInventory(5000);
-		this.cupsOfCoffee = 1;
+		this.cupsOfCoffee = 3;
 		this.type = "coffee";
 
 	}
